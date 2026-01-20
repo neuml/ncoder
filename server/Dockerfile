@@ -2,6 +2,9 @@
 ARG BASE_IMAGE=neuml/txtai-gpu
 FROM $BASE_IMAGE
 
+# Target CPU architecture
+ARG TARGETARCH
+
 # Copy files
 COPY *.yml start.sh .
 
@@ -20,7 +23,7 @@ RUN \
     ln -s ~/.opencode/bin/opencode /app/opencode && \
     \
     # Install llama-cpp-python with GPU support, latest txtai from GH and other dependencies
-    python -m pip install llama-cpp-python --force-reinstall --no-deps --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu124 && \
+    if { [ -z ${TARGETARCH} ] || [ ${TARGETARCH} = "amd64" ] ;}; then python -m pip install llama-cpp-python --force-reinstall --no-deps --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu124; fi && \
     python -m pip install git+https://github.com/neuml/txtai && \
     python -m pip install markdownify && \
     \
