@@ -18,7 +18,7 @@
 
 `ncoder` is an open-source AI coding agent that integrates with Jupyter Notebooks. This project uses the OpenAI API client to connect to any OpenAI-compatible endpoint and enable collaborative coding with AI. 
 
-`ncoder` provides a [base Docker image](https://hub.docker.com/r/neuml/ncoder-server) that supports coding with [OpenCode](https://opencode.ai/) in [server mode](https://opencode.ai/docs/server/), a [quantized Qwen3-Coder 30B model](https://huggingface.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF) for lightweight local inference and/or any other [txtai process](https://github.com/neuml/txtai).
+`ncoder` provides a [base Docker image](https://hub.docker.com/r/neuml/ncoder) that supports coding with [OpenCode](https://opencode.ai/) in [server mode](https://opencode.ai/docs/server/), a [quantized Qwen3-Coder 30B model](https://huggingface.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF) for lightweight local inference and/or any other [txtai process](https://github.com/neuml/txtai).
 
 ## Quickstart
 
@@ -32,13 +32,13 @@ pip install ncoder
 
 ```
 # DEFAULT: Run with opencode backend, sends data to `opencode serve` endpoint
-docker run -p 8000:8000 --gpus all --rm -it neuml/ncoder-server
+docker run -p 8000:8000 --gpus all --rm -it neuml/ncoder
 
 # ALTERNATIVE 1: Run with qwen3-coder, keeps all data local
-docker run -p 8000:8000 -e CONFIG=qwen3-coder.yml -gpus all --rm -it neuml/ncoder-server
+docker run -p 8000:8000 -e CONFIG=qwen3-coder.yml -gpus all --rm -it neuml/ncoder
 
 # ALTERNATIVE 2: Run with a custom txtai workflow
-docker run -p 8000:8000 -v config:/config -e CONFIG=/config/config.yml --gpus all --rm -it neuml/ncoder-server
+docker run -p 8000:8000 -v config:/config -e CONFIG=/config/config.yml --gpus all --rm -it neuml/ncoder
 ```
 
 Jupyter Notebooks can be created in [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) or your preferred notebook platform. Add the following two sections to test.
