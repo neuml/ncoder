@@ -1,7 +1,7 @@
 # 💫 ncoder 
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/neuml/ncoder/images/overview.png"/>
+    <img src="https://raw.githubusercontent.com/neuml/ncoder/master/images/overview.png"/>
 </p>
 
 <p align="center">
@@ -69,5 +69,5 @@ If you already have a LLM API you'd like to integrate with, it's simply a matter
 The short video clip below gives a brief overview on how to use `ncoder`.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/neuml/ncoder/images/demo.gif"/>
+    <img src="https://raw.githubusercontent.com/neuml/ncoder/master/images/demo.gif"/>
 </p>
