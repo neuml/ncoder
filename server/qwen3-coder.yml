@@ -1,0 +1,14 @@
+# Enable OpenAI compat endpoint
+openai: True
+
+# AI Coding Agent
+agent:
+  ncoder:
+    tools:
+      - websearch
+      - webview
+    max_steps: 10
+
+llm:
+  path: unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF/Qwen3-Coder-30B-A3B-Instruct-Q3_K_M.gguf
+  n_ctx: 30000

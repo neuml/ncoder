@@ -1,0 +1,13 @@
+# Enable OpenAI compat endpoint
+openai: True
+
+# AI Coding Agent
+agent:
+  ncoder:
+    tools:
+      - websearch
+      - webview
+    max_steps: 10
+
+llm:
+  path: opencode
