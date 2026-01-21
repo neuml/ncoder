@@ -53,7 +53,7 @@ Jupyter Notebooks can be created in [Visual Studio Code](https://code.visualstud
 %ncoder Write a Python Hello World Example
 ```
 
-An [example notebook](https://github.com/neuml/ncoder/blob/master/examples.ipynb) is also available.
+An [example notebook](https://github.com/neuml/ncoder/blob/master/example.ipynb) is also available.
 
 If you already have a LLM API you'd like to integrate with, it's simply a matter of setting the correct environment variables.
 
