@@ -14,7 +14,7 @@ ENV CONFIG="opencode.yml"
 RUN \
     # Install required packages
     apt-get update && \
-    apt-get -y --no-install-recommends install curl git && \
+    apt-get -y --no-install-recommends install curl && \
     rm -rf /var/lib/apt/lists && \
     chmod +x /app/start.sh && \
     \
@@ -22,9 +22,8 @@ RUN \
     curl -fsSL https://opencode.ai/install | bash && \
     ln -s ~/.opencode/bin/opencode /app/opencode && \
     \
-    # Install llama-cpp-python with GPU support, latest txtai from GH and other dependencies
+    # Install llama-cpp-python with GPU support and other dependencies
     if { [ -z ${TARGETARCH} ] || [ ${TARGETARCH} = "amd64" ] ;}; then python -m pip install llama-cpp-python --force-reinstall --no-deps --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu124; fi && \
-    python -m pip install git+https://github.com/neuml/txtai && \
     python -m pip install markdownify && \
     \
     # Cleanup build packages
