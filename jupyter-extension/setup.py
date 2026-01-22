@@ -7,7 +7,7 @@ with open("../README.md", "r", encoding="utf-8") as f:
 
 setup(
     name="ncoder",
-    version="0.2.0",
+    version="0.3.0",
     author="NeuML",
     description="Jupyter notebook plugin to generate code with AI",
     long_description=DESCRIPTION,
