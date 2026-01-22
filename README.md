@@ -84,4 +84,4 @@ The short video clip below gives a brief overview on how to use `ncoder`.
 
 ## Further Reading
 
-- [Introducing `ncoder`](https://medium.com/neuml/introducing-ncoder-c3d2dff7f55b)
+- [Introducing `ncoder`](https://medium.com/neuml/introducing-ncoder-c3d2dff7f55b) [▶️](https://www.youtube.com/watch?v=S5k-vrukEJk)
