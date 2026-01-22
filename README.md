@@ -36,7 +36,8 @@ docker run -p 8000:8000 --gpus all --rm -it neuml/ncoder
 docker run -p 8000:8000 -e CONFIG=qwen3-coder.yml -gpus all --rm -it neuml/ncoder
 
 # ALTERNATIVE 2: Run with a custom txtai workflow
-docker run -p 8000:8000 -v config:/config -e CONFIG=/config/config.yml --gpus all --rm -it neuml/ncoder
+docker run -p 8000:8000 -v config:/config -e CONFIG=/config/config.yml \
+--gpus all --rm -it neuml/ncoder
 ```
 
 Running in a sandboxed environment decouples AI coding from your local working environment. Running in isolation provides assurance that it won’t modify your workspace directly.
